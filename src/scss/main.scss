@@ -14,6 +14,8 @@ TABLE OF CONTENTS:
 
 /* 0. Reset ================================= */
 @use 'reset';
+@use 'variables';
+@use 'mixins';
 
 
 /* 1. STYLES ================================= */
@@ -26,4 +28,113 @@ TABLE OF CONTENTS:
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: 339px 570px 379px 550px 655px 581px;
+	background: #F7ECF8;
+}
+
+.testimonial{
+	padding: 3.5rem 2rem;
+	display: flex;
+	flex-direction:column;
+	position: relative;
+
+	&_user-info-bottom{
+		color: variables.$blue;
+		background: white;
+	}
+
+	&_user-info-top{
+		color: #ECF2F8;
+		background: #19202D;
+		padding: 2rem;
+	}
+
+	&_lucila{
+		color: variables.$blue;
+		background: white;
+		padding-top: 3.5rem;
+	}
+
+	&_kiele{
+		background: #CB1E7B;
+	}
+
+	&__heading{
+		font-size: 26px;
+		font-family: variables.$testimonial-heading;
+		line-height: 1.9rem;
+		margin-bottom: 1rem;
+		z-index: 1;
+	}
+
+	&__text{
+		color: white;
+		line-height: 24px;
+		font-size: 16px;
+		font-family: variables.$testimonial-text;
+		opacity: 70%;
+		margin-bottom: 0.75rem;
+
+		&_on-white{
+			color: variables.$blue;
+		}
+
+		&_kiele{
+			color: #CFCFCF;
+		}
+	}
+
+	&__user-row{
+		display: flex;
+		align-items: center;
+		color: white;
+		padding-bottom: 1rem;
+		
+		&_bottom{
+			justify-content: flex-end;
+			color: variables.$blue;
+		}
+
+		&_lucila{
+			color: variables.$blue;
+		}
+	}
+
+	&__user-photo{
+		object-fit: cover;
+		object-position: center;
+		width: 32px;
+		height: 32px;
+	}
+
+	&__user-name{
+		font-size: 13px;
+		font-family: variables.$testimonial-text;
+		margin-bottom: 0.25rem;
+	}
+
+	&__user-status{
+		opacity: 50%;
+		font-family: variables.$testimonial-text;
+		font-size: 11px;
+	}
+
+	&__name-display{
+		margin: 0px 11px;
+	}
+
+	&__quote{
+		position: absolute;
+		top: -1rem;
+		right: 1rem;
+		font-size: 26.875rem;
+		font-family: variables.$testimonial-text;
+		color: #060101;
+		opacity: 10%;
+		z-index: 0;
+
+		&_lucila{
+			display: none;
+		}
+	}
+
 }

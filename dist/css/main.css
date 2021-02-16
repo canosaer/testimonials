@@ -159,6 +159,7 @@ TABLE OF CONTENTS:
   grid-template-columns: 100%;
   -ms-grid-rows: 339px 570px 379px 550px 655px 581px;
   grid-template-rows: 339px 570px 379px 550px 655px 581px;
+  background: #F7ECF8;
 }
 
 .testimonial-display > *:nth-child(1) {
@@ -189,5 +190,97 @@ TABLE OF CONTENTS:
 .testimonial-display > *:nth-child(6) {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
+}
+
+.testimonial {
+  padding: 3.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.testimonial_user-info-bottom {
+  color: #48556A;
+  background: white;
+}
+.testimonial_user-info-top {
+  color: #ECF2F8;
+  background: #19202D;
+  padding: 2rem;
+}
+.testimonial_lucila {
+  color: #48556A;
+  background: white;
+  padding-top: 3.5rem;
+}
+.testimonial_kiele {
+  background: #CB1E7B;
+}
+.testimonial__heading {
+  font-size: 26px;
+  font-family: "Abril Fatface", cursive;
+  line-height: 1.9rem;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+.testimonial__text {
+  color: white;
+  line-height: 24px;
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, "Lucida Grande", Arial, sans-serif;
+  opacity: 70%;
+  margin-bottom: 0.75rem;
+}
+.testimonial__text_on-white {
+  color: #48556A;
+}
+.testimonial__text_kiele {
+  color: #CFCFCF;
+}
+.testimonial__user-row {
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-bottom: 1rem;
+}
+.testimonial__user-row_bottom {
+  justify-content: flex-end;
+  color: #48556A;
+}
+.testimonial__user-row_lucila {
+  color: #48556A;
+}
+.testimonial__user-photo {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 32px;
+  height: 32px;
+}
+.testimonial__user-name {
+  font-size: 13px;
+  font-family: "Helvetica Neue", Helvetica, "Lucida Grande", Arial, sans-serif;
+  margin-bottom: 0.25rem;
+}
+.testimonial__user-status {
+  opacity: 50%;
+  font-family: "Helvetica Neue", Helvetica, "Lucida Grande", Arial, sans-serif;
+  font-size: 11px;
+}
+.testimonial__name-display {
+  margin: 0px 11px;
+}
+.testimonial__quote {
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+  font-size: 26.875rem;
+  font-family: "Helvetica Neue", Helvetica, "Lucida Grande", Arial, sans-serif;
+  color: #060101;
+  opacity: 10%;
+  z-index: 0;
+}
+.testimonial__quote_lucila {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
