@@ -1,6 +1,6 @@
 /* 
 ==============================================
-CONTENT:	Project Name Here
+CONTENT:	Testimonials
 AUTHOR:		Eric Canosa
 ==============================================
 
@@ -20,4 +20,10 @@ TABLE OF CONTENTS:
 
 *, *::before, *::after {
 	box-sizing: border-box;
+}
+
+.testimonial-display{
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 339px 570px 379px 550px 655px 581px;
 }
