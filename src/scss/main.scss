@@ -26,16 +26,34 @@ TABLE OF CONTENTS:
 
 .testimonial-display{
 	display: grid;
-	grid-template-columns: 100%;
-	grid-template-rows: 339px 570px 379px 550px 655px 581px;
+	grid-template-columns: 1fr;
+	grid-template-rows: 11fr 19fr 12fr 18fr 21fr 19fr;
 	background: #F7ECF8;
+
+	@include mixins.tablet {
+		grid-template-columns: 1fr 4fr 4fr 1fr;
+		grid-template-rows: 5fr 30fr 30fr 30fr 30fr 5fr;
+		column-gap: 31px;
+		row-gap: 24px;
+	}
+
+	@include mixins.desktop {
+		grid-template-columns: 1.5fr 4fr 4fr 4fr 4fr 1.5fr;
+		grid-template-rows: 5fr 30fr 30fr 5fr;
+		column-gap: 31px;
+		row-gap: 24px;
+	}
 }
 
 .testimonial{
-	padding: 3.5rem 2rem;
+	padding: 3.5rem 9.5%;
 	display: flex;
 	flex-direction:column;
 	position: relative;
+
+	@include mixins.tablet {
+		border-radius: 25px;
+	}
 
 	&_user-info-bottom{
 		color: variables.$blue;
@@ -45,17 +63,77 @@ TABLE OF CONTENTS:
 	&_user-info-top{
 		color: #ECF2F8;
 		background: #19202D;
-		padding: 2rem;
+		padding: 2rem 9.5%;
+	}
+
+	&_jessi{
+		@include mixins.tablet {
+			grid-column: 2/4;
+			grid-row: 2/3;
+		}
+
+		@include mixins.desktop {
+			grid-column: 3/5;
+			grid-row: 2/3;
+		}
 	}
 
 	&_lucila{
 		color: variables.$blue;
 		background: white;
 		padding-top: 3.5rem;
+
+		@include mixins.tablet {
+			grid-column: 2/3;
+			grid-row: 4/6;
+		}
+
+		@include mixins.desktop {
+			grid-column: 5/6;
+			grid-row: 2/4;
+		}
 	}
 
 	&_kiele{
 		background: #CB1E7B;
+
+		@include mixins.tablet {
+			grid-column: 2/4;
+			grid-row: 3/4;
+		}
+
+		@include mixins.desktop {
+			grid-column: 2/4;
+			grid-row: 3/4;
+		}
+
+	}
+
+	&_corwin{
+		@include mixins.tablet {
+			grid-column: 3/4;
+			grid-row: 4/5;
+		}
+
+		@include mixins.desktop {
+			grid-column: 2/3;
+			grid-row: 2/3;
+			background: unset;
+		}
+		
+	}
+
+	&_marcio{
+		@include mixins.tablet {
+			grid-column: 3/4;
+			grid-row: 5/6;
+		}
+
+		@include mixins.desktop {
+			grid-column: 4/5;
+			grid-row: 3/4;
+			background: unset;
+		}
 	}
 
 	&__heading{
@@ -132,8 +210,20 @@ TABLE OF CONTENTS:
 		opacity: 10%;
 		z-index: 0;
 
+		@include mixins.desktop {
+			top: -3rem;
+			right: 6rem;
+			font-size: 29rem;
+		}
+
 		&_lucila{
 			display: none;
+
+			@include mixins.desktop {
+				display: flex;
+				top: 2.25rem;
+				right: -1.25rem;
+			}
 		}
 	}
 
